@@ -1,7 +1,13 @@
-Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
+## Starting the fast.ai course
 
-![Image of fast.ai logo](images/logo.png)
+I've recently started taking the [fast.ai course](https://course.fast.ai/) and now I'm following the course advice and starting a blog. The purpose of this blog is keep me honest and motivated to continue and ultimately finish the course, share work I've created for the course, and discuss my experience taking the course. 
 
-## This is a title
+I've already watched the videos for the first two weeks, finished chapter one reading and reading questions (even though all the reading is available for free online, I bought a physical copy of the book as it will reduce the amount of time I spend starring at screens), and completed the week one homework of repurposing the course code to create an image classifier for the image type of your choice. For the image I chose a bear. [My bear classifier](https://github.com/ivaronin/fastai/blob/main/Is_it_a_bird%3F_Creating_a_model_from_your_own_data.ipynb) works as far as I've tested it. 
 
-And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
+It was a bit of an adventure to finish this project as the off-the-shelf course code used a deprecated class from the duckduckgo image search library so the code wouldn't run. I searched [the duckduckgo search python library documentation](https://pypi.org/project/duckduckgo-search/#3-images---image-search-by-duckduckgocom), found the updated image search class that I needed and implemented it successfully. It was satisfying to get the classifier to work. 
+
+I had purchased a [paperspace gradient](https://console.paperspace.com/) account to run my projects because I thought the free virtual machines on kaggle and colab were too slow. It turns out that I hadn't switched kaggle and colab to use GPU instead of CPU. Once I made that change, I found that kaggle and colab were both fast enough. I ended up using colab to build my project because I found that it had more of the libraries preinstalled that I needed to run the code in the notebook. I spent some time trying to figure out it if I could create an environment on a virtual machine that saved all the libraries that I had previously installed so I wouldn't have to reinstall them each time I run the notebook but I couldn't figure it out. 
+
+Per another course suggestion, I started using [aiquizzes](https://aiquizzes.com/) which has preloaded course-related questions that are different from the reading. I'm committed to learning the terms and the concepts (in addition to how to create and execute the code) and aiquizzes seems like a good resource for that.
+
+Up next: I need to finish the chapter 2 reading, answer the chapter 2 reading questions, and do the chapter 2 homework. I'll update this blog once I've done that.
