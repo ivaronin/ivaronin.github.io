@@ -19,8 +19,10 @@ Using a [GPU-powered notebook](https://console.paperspace.com/t9132vjg9g/noteboo
 5. Retrain the model
 6. Export the trained model
 
-Then on my CPU, I opened an instance of jupyter notebook and:
+Then [on my CPU](https://huggingface.co/spaces/ianco15/bridges/tree/main), I opened an instance of jupyter notebook and:
 1. Imported the trained model
 2. Created a function that can be used to make predictions on new images
 3. Created a Gradio object that referenced the predictions function
 4. Exported the code as a python file and pushed it to Gradio
+
+That's all for now. Onto chapter 3!
