@@ -8,7 +8,7 @@
 
 title: Ian Varonin's blog
 description: This is Ian's blog
-github_username: jph00
+github_username: ivaronin
 
 # Email and twitter are optional:
 email: ivaronin@gmail.com
@@ -21,8 +21,8 @@ use_math:
 google_analytics:
 
 # Everything below here can be ignored, unless you want to change the theme entirely
-remote_theme: pages-themes/hacker@v0.2.0
-# theme: minima
+# remote_theme: pages-themes/hacker@v0.2.0
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-gist
