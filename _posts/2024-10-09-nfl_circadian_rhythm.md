@@ -23,29 +23,6 @@ Let's get started by importing some of the libraries we know we will need for th
 
 
 ```python
-#hide
-# import needed libraries
-from bs4 import BeautifulSoup
-import pandas as pd
-import requests
-
-from bs4 import BeautifulSoup
-from datetime import time
-import pandas as pd
-import requests
-import sqlite3
-
-with sqlite3.connect('/Users/ianvaronin/code/betting_lines/pick_four') as conn:
-# import df from sql
-    lines_df = pd.read_sql_query('''select * from nfl_spread_data''', conn)
-    
-    # import df from sql
-with sqlite3.connect('/Users/ianvaronin/code/betting_lines/pick_four') as conn:
-    seasons_df = pd.read_sql_query('''select * from nfl_seasons_data''', conn)
-```
-
-
-```python
 # import needed libraries
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -330,18 +307,18 @@ def download_tables(url, match, teams=teams, years=years):
 
 
 ```python
-# # set base url and name of table we want to pull
-# url = 'https://www.pro-football-reference.com/teams/{team}/{year}_lines.htm'
-# match = 'Vegas Lines'
+# set base url and name of table we want to pull
+url = 'https://www.pro-football-reference.com/teams/{team}/{year}_lines.htm'
+match = 'Vegas Lines'
 
-# # pull lines tables for every team in the nfl for the years 1994-2003 
-# all_lines = download_tables(url, match)
+# pull lines tables for every team in the nfl for the years 1994-2003 
+all_lines = download_tables(url, match)
 ```
 
 
 ```python
-# # concat all dataframes into single dataframe
-# lines_df = pd.concat(all_lines)
+# concat all dataframes into single dataframe
+lines_df = pd.concat(all_lines)
 ```
 
 
@@ -536,8 +513,8 @@ Given how long it took to pull data from football reference, we should save it s
 # save seasons df to sqlite database
 import sqlite3
 with sqlite3.connect('/Users/ianvaronin/code/betting_lines/pick_four') as conn:
-#     seasons_df.to_sql(name='nfl_spread_data', con=conn, if_exists='replace', index=False)
-#     conn.commit()
+    seasons_df.to_sql(name='nfl_spread_data', con=conn, if_exists='replace', index=False)
+    conn.commit()
     
     # ensure df was saved correctly
     _ = pd.read_sql_query('''select * from nfl_spread_data''', conn)
@@ -940,19 +917,19 @@ Since we had success pulling game outcome data for one team for one year, let's 
 
 
 ```python
-# # pull seasons data from football reference for all teams for past three decades
-# url = 'https://www.pro-football-reference.com/teams/{team}/{year}.htm'
-# match = 'Schedule & Game Results'
-# all_seasons = download_tables(url, match)
+# pull seasons data from football reference for all teams for past three decades
+url = 'https://www.pro-football-reference.com/teams/{team}/{year}.htm'
+match = 'Schedule & Game Results'
+all_seasons = download_tables(url, match)
 ```
 
 
 ```python
-# # concatate seasons data into df
-# seasons_df = pd.concat(all_seasons)
+# concatate seasons data into df
+seasons_df = pd.concat(all_seasons)
 
-# # drop unneeded column
-# seasons_df = seasons_df.drop(seasons_df.columns[4], axis=1)
+# drop unneeded column
+seasons_df = seasons_df.drop(seasons_df.columns[4], axis=1)
 ```
 
 
@@ -1471,8 +1448,8 @@ Just as we saved our `lines_df` to our database we should do the same with our `
 ```python
 # save seasons df to sqlite database
 with sqlite3.connect('/Users/ianvaronin/code/betting_lines/pick_four') as conn:
-#     seasons_df.to_sql(name='nfl_seasons_data', con=conn, if_exists='replace', index=False)
-#     conn.commit()
+    seasons_df.to_sql(name='nfl_seasons_data', con=conn, if_exists='replace', index=False)
+    conn.commit()
     
     # ensure df was saved correctly
     _ = pd.read_sql_query('''select * from nfl_seasons_data''', conn)
@@ -1659,7 +1636,7 @@ There are a few types of rows that can be dropped:
 - Some of the rows that are empty except for the `Date` column which says "Playoffs". This is actually a sub heading and these rows can be dropped
 - Some of the rows have are empty except for the `Opp` column which says "Bye Week". This is actually a sub heading and these rows can be dropped
 
-![nfl_sfo_2023.png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/nfl_sfo_2023.png)
+![nfl_sfo_2023.png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/nfl_sfo_2023.png?raw=true))
 
 
 ```python
@@ -2858,7 +2835,7 @@ _ = plot_winrate(yr_list=yrs, wr_list=wrs)
 
 
     
-![png](output_132_0.png)
+![png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/output_132_0.png?raw=true)
     
 
 
@@ -2886,7 +2863,7 @@ _ = plot_winrate(
 
 
     
-![png](output_135_0.png)
+![png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/output_135_0.png?raw=true)
     
 
 
@@ -2956,7 +2933,7 @@ _ = plot_winrate(yr_list=yrs,
 
 
     
-![png](output_143_0.png)
+![png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/output_143_0.png?raw=true)
     
 
 
@@ -2977,7 +2954,7 @@ _ = plot_winrate(
 
 
     
-![png](output_145_0.png)
+![png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/output_145_0.png?raw=true)
     
 
 
