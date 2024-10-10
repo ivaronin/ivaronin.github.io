@@ -7,12 +7,18 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Ian Varonin's blog
-description: This is Ian's blog
+description: 
 github_username: ivaronin
+author:
+  name: Ian Varonin
+  email: ivaronin@gmail.com
+  website: ianvaronin.com
 
-# Email and twitter are optional:
-email: ivaronin@gmail.com
-twitter_username:
+pageinate: 3
+
+# # Email and twitter are optional:
+# email: ivaronin@gmail.com
+# twitter_username:
 
 # Set this to true to get LaTeX math equation support
 use_math:
@@ -21,9 +27,9 @@ use_math:
 google_analytics:
 
 # Everything below here can be ignored, unless you want to change the theme entirely
-# remote_theme: pages-themes/hacker@v0.2.0
+remote_theme: pages-themes/hacker@v0.2.0
 # remote_theme: hacker-blog
-remote_theme: pages-themes/midnight@v0.2.0
+# remote_theme: pages-themes/midnight@v0.2.0
 # theme: minima
 plugins:
   - jekyll-feed
