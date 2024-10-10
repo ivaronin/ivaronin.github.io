@@ -155,7 +155,7 @@ Now that we have the abbreviated PFR name for each team in the NFL, let's start 
 
 We can download the table we need from each teams's [PFR Vegas Lines page](https://www.pro-football-reference.com/teams/sfo/2023_lines.htm) by pulling in the text for the table with the name "Vegas Lines"
 
-![vegas_lines.png](/Users/ianvaronin/code/circadian_rhythm/ivaronin.github.io/images/vegas_lines.png)
+![vegas_lines.png](images/vegas_lines.png)
 
 
 ```python
