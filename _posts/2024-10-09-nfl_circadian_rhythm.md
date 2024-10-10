@@ -155,7 +155,7 @@ Now that we have the abbreviated PFR name for each team in the NFL, let's start 
 
 We can download the table we need from each teams's [PFR Vegas Lines page](https://www.pro-football-reference.com/teams/sfo/2023_lines.htm) by pulling in the text for the table with the name "Vegas Lines"
 
-![vegas_lines_1.png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/vegas_lines.png?raw=true)
+![vegas_lines.png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/vegas_lines.png?raw=true)
 
 
 ```python
@@ -1213,7 +1213,7 @@ Success!
 
 Some of the columns in our `seasons_df` are missing labels and others have confusing or duplicate labels. We can infer the meaning of these columns by looking at the source data on pro-football-reference.com. Let's rename these column names to be more descriptive.
 
-![pfr_sfo_szn.png](pfr_sfo_szn.png)
+![pfr_sfo_szn.png](images/pfr_sfo_szn.png)
 
 
 ```python
