@@ -1659,7 +1659,7 @@ There are a few types of rows that can be dropped:
 - Some of the rows that are empty except for the `Date` column which says "Playoffs". This is actually a sub heading and these rows can be dropped
 - Some of the rows have are empty except for the `Opp` column which says "Bye Week". This is actually a sub heading and these rows can be dropped
 
-![nfl_sfo_2023.png](nfl_sfo_2023.png)
+![nfl_sfo_2023.png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/nfl_sfo_2023.png)
 
 
 ```python
