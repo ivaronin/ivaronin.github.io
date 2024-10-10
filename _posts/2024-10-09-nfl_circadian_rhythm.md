@@ -1213,7 +1213,7 @@ Success!
 
 Some of the columns in our `seasons_df` are missing labels and others have confusing or duplicate labels. We can infer the meaning of these columns by looking at the source data on pro-football-reference.com. Let's rename these column names to be more descriptive.
 
-![pfr_sfo_szn.png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/pfr_sfo_szn.png)
+![pfr_sfo_szn.png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/pfr_sfo_szn.png?raw=true)
 
 
 ```python
