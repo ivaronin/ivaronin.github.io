@@ -8,11 +8,6 @@ tags:
  - gambling
 published: true
 ---
-
-```python
-%matplotlib notebook
-```
-
 # How do circadian rhythms affect primetime NFL game outcomes in 2024?
 About ten years ago I read [this Deadspin article](https://deadspin.com/the-circadian-advantage-how-sleep-patterns-benefit-cer-5934440/) which discussed the effects of circadian rhythms - the cycle during which a person naturally feels more awake and more sleepy during at different times during a 24 hour period - on NFL game scores and betting outcomes. Researchers studied games played on Monday Night Football between a team based on the west coast and a team based on the east coast, i.e. based in time zones three hours apart. Over a 25 year period the west coast team won 63% of the time, winning by an average of two touchdowns, and covered the [point spread](https://www.forbes.com/betting/football/nfl/nfl-point-spread/) - the forecasted difference between the final scores of the favored team and the underdog team, used in betting markets to try to eliminate the advantage of betting on the favored team - 70% of the time. Researchers have posited that the reason west coast teams have had such a huge advantage over east coast teams in primetime (night) games - which always start around 5:20pm Pacific Time, regardless of where the game is played - is because the players based on the west coast feel more awake than the players based on the east coast during these games. During these night games, this three hour time zone difference is significant because players based on the east coast are much closer to their body's natural time for sleep.
 
@@ -25,6 +20,29 @@ In short, the circadian rhythm phenomenon is due for an update. To investigate, 
 I will work in python which has a number of helpful libraries for a project like this, notably `requests` and `BeautifulSoup` to help with scraping data and `pandas` to help with analysis, among others.
 
 Let's get started by importing some of the libraries we know we will need for this project.
+
+
+```python
+#hide
+# import needed libraries
+from bs4 import BeautifulSoup
+import pandas as pd
+import requests
+
+from bs4 import BeautifulSoup
+from datetime import time
+import pandas as pd
+import requests
+import sqlite3
+
+with sqlite3.connect('/Users/ianvaronin/code/betting_lines/pick_four') as conn:
+# import df from sql
+    lines_df = pd.read_sql_query('''select * from nfl_spread_data''', conn)
+    
+    # import df from sql
+with sqlite3.connect('/Users/ianvaronin/code/betting_lines/pick_four') as conn:
+    seasons_df = pd.read_sql_query('''select * from nfl_seasons_data''', conn)
+```
 
 
 ```python
@@ -137,7 +155,7 @@ Now that we have the abbreviated PFR name for each team in the NFL, let's start 
 
 We can download the table we need from each teams's [PFR Vegas Lines page](https://www.pro-football-reference.com/teams/sfo/2023_lines.htm) by pulling in the text for the table with the name "Vegas Lines"
 
-![vegas_lines.png](vegas_lines.png)
+![vegas_lines.png](/Users/ianvaronin/code/circadian_rhythm/ivaronin.github.io/images/vegas_lines.png)
 
 
 ```python
@@ -312,18 +330,18 @@ def download_tables(url, match, teams=teams, years=years):
 
 
 ```python
-# set base url and name of table we want to pull
-url = 'https://www.pro-football-reference.com/teams/{team}/{year}_lines.htm'
-match = 'Vegas Lines'
+# # set base url and name of table we want to pull
+# url = 'https://www.pro-football-reference.com/teams/{team}/{year}_lines.htm'
+# match = 'Vegas Lines'
 
-# pull lines tables for every team in the nfl for the years 1994-2003 
-all_lines = download_tables(url, match)
+# # pull lines tables for every team in the nfl for the years 1994-2003 
+# all_lines = download_tables(url, match)
 ```
 
 
 ```python
-# concat all dataframes into single dataframe
-lines_df = pd.concat(all_lines)
+# # concat all dataframes into single dataframe
+# lines_df = pd.concat(all_lines)
 ```
 
 
@@ -518,8 +536,8 @@ Given how long it took to pull data from football reference, we should save it s
 # save seasons df to sqlite database
 import sqlite3
 with sqlite3.connect('/Users/ianvaronin/code/betting_lines/pick_four') as conn:
-    seasons_df.to_sql(name='nfl_spread_data', con=conn, if_exists='replace', index=False)
-    conn.commit()
+#     seasons_df.to_sql(name='nfl_spread_data', con=conn, if_exists='replace', index=False)
+#     conn.commit()
     
     # ensure df was saved correctly
     _ = pd.read_sql_query('''select * from nfl_spread_data''', conn)
@@ -697,6 +715,47 @@ col_mapper = {
              }
 team_table = team_table.rename(columns=col_mapper)
 ```
+
+
+```python
+# get to know the columns
+seasons_df.info()
+```
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 7916 entries, 0 to 7915
+    Data columns (total 26 columns):
+     #   Column            Non-Null Count  Dtype 
+    ---  ------            --------------  ----- 
+     0   Week              7916 non-null   object
+     1   Day               7916 non-null   object
+     2   Date              7916 non-null   object
+     3   Kickoff_Time      7916 non-null   object
+     4   Result            7916 non-null   object
+     5   OT                486 non-null    object
+     6   Rec               7916 non-null   object
+     7   Location          0 non-null      object
+     8   Opponent          7916 non-null   object
+     9   Points_Scored     7916 non-null   object
+     10  Points_Allowed    7916 non-null   object
+     11  1stD_Off          7916 non-null   object
+     12  TotYd_Off         7916 non-null   object
+     13  PassY_Off         7916 non-null   object
+     14  RushY_Off         7916 non-null   object
+     15  TO_Off            6063 non-null   object
+     16  1stD_Def          7916 non-null   object
+     17  TotYd_Def         7916 non-null   object
+     18  PassY_Def         7914 non-null   object
+     19  RushY_Def         7916 non-null   object
+     20  TO_Def            6239 non-null   object
+     21  Exp_Points_Off    7916 non-null   object
+     22  Exp_Points_Def    7916 non-null   object
+     23  Exp_Points_SpTms  7916 non-null   object
+     24  team              7916 non-null   object
+     25  year              7916 non-null   object
+    dtypes: object(26)
+    memory usage: 1.6+ MB
+
 
 
 ```python
@@ -881,19 +940,52 @@ Since we had success pulling game outcome data for one team for one year, let's 
 
 
 ```python
-# pull seasons data from football reference for all teams for past three decades
-url = 'https://www.pro-football-reference.com/teams/{team}/{year}.htm'
-match = 'Schedule & Game Results'
-all_seasons = download_tables(url, match)
+# # pull seasons data from football reference for all teams for past three decades
+# url = 'https://www.pro-football-reference.com/teams/{team}/{year}.htm'
+# match = 'Schedule & Game Results'
+# all_seasons = download_tables(url, match)
 ```
 
 
 ```python
-# concatate seasons data into df
-seasons_df = pd.concat(all_seasons)
+# # concatate seasons data into df
+# seasons_df = pd.concat(all_seasons)
 
-# drop unneeded column
-seasons_df = seasons_df.drop(seasons_df.columns[4], axis=1)
+# # drop unneeded column
+# seasons_df = seasons_df.drop(seasons_df.columns[4], axis=1)
+```
+
+
+```python
+#hide
+# rename unlabled columns and columns with unclear names
+col_mapper_reverse = {
+              seasons_df.columns[3] : 'Kickoff_Time',
+              seasons_df.columns[4] : 'Result',
+              seasons_df.columns[7] : 'Location',
+              'Tm' : 'Points_Scored',
+              'Offense' : 'Exp_Points_Off',
+              'Defense' : 'Exp_Points_Def',
+              'Sp. Tms' : 'Exp_Points_Sp_Tms',
+             }
+seasons_df = seasons_df.rename(columns=col_mapper_reverse)
+
+# rename offense and defense columns
+offdef_reverse = {'Opponent' : 'Opp',
+          'Points_Allowed': 'Opp',
+          '1stD_Off' : '1stD', 
+          '1stD_Def' : '1stD',
+          'TotYd_Off' : 'TotYd',
+          'TotYd_Def' : 'TotYd',
+          'PassY_Off' : 'PassY',
+          'PassY_Def' : 'PassY' ,
+          'RushY_Off' : 'RushY',
+          'RushY_Def' : 'RushY',
+          'TO_Off' : 'TO',
+          'TO_Def' : 'TO'}
+
+# rename duplicate column names per the offdef dictionary
+seasons_df = seasons_df.rename(columns=offdef_reverse)
 ```
 
 
@@ -1379,8 +1471,8 @@ Just as we saved our `lines_df` to our database we should do the same with our `
 ```python
 # save seasons df to sqlite database
 with sqlite3.connect('/Users/ianvaronin/code/betting_lines/pick_four') as conn:
-    seasons_df.to_sql(name='nfl_seasons_data', con=conn, if_exists='replace', index=False)
-    conn.commit()
+#     seasons_df.to_sql(name='nfl_seasons_data', con=conn, if_exists='replace', index=False)
+#     conn.commit()
     
     # ensure df was saved correctly
     _ = pd.read_sql_query('''select * from nfl_seasons_data''', conn)
@@ -1622,11 +1714,11 @@ seasons_df['team'].sample(n=5)
 
 
 
-    6684    car
-    6225    nor
-    7831    crd
-    7435    sea
-    2111    htx
+    3106    kan
+    140     buf
+    4626    nyg
+    2917    kan
+    5536    min
     Name: team, dtype: object
 
 
@@ -2756,6 +2848,9 @@ yrs, wrs = year_loop(wc_night_game_win_df, night_game_df, years, year_span=1)
 
 
 ```python
+# enable plotting
+%matplotlib inline
+
 # plot win rate by year
 import matplotlib.pyplot as plt
 _ = plot_winrate(yr_list=yrs, wr_list=wrs)
@@ -2763,7 +2858,7 @@ _ = plot_winrate(yr_list=yrs, wr_list=wrs)
 
 
     
-![png](output_130_0.png)
+![png](output_132_0.png)
     
 
 
@@ -2791,7 +2886,7 @@ _ = plot_winrate(
 
 
     
-![png](output_133_0.png)
+![png](output_135_0.png)
     
 
 
@@ -2861,7 +2956,7 @@ _ = plot_winrate(yr_list=yrs,
 
 
     
-![png](output_141_0.png)
+![png](output_143_0.png)
     
 
 
@@ -2882,7 +2977,7 @@ _ = plot_winrate(
 
 
     
-![png](output_143_0.png)
+![png](output_145_0.png)
     
 
 
