@@ -4,8 +4,13 @@
 
 @import "{{ site.theme }}";
 
-.table {
-    overflow-x: scroll;
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .post img {

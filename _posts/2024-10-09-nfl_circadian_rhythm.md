@@ -161,7 +161,7 @@ lines_table.head()
 
 
 
-<div style="overflow-x:auto;">  
+<div class="table-container">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -376,7 +376,7 @@ lines_df.head()
 
 
 
-<div style="overflow-x:auto;">  
+<div class="table-container"> 
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -525,7 +525,7 @@ _.head()
 
 
 
-<div>
+<div class="table-container">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -743,7 +743,7 @@ team_table.head()
 
 
 
-<div>
+<div class="table-container">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1015,7 +1015,7 @@ seasons_df.head()
 
 
 
-<div>
+<div class="table-container">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1271,7 +1271,7 @@ seasons_df.head()
 
 
 
-<div>
+<div class="table-container">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1460,7 +1460,7 @@ _.head()
 
 
 
-<div>
+<div class="table-container">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1733,7 +1733,7 @@ time_zones.head()
 
 
 
-<div>
+<div class="table-container">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1815,7 +1815,7 @@ opponent_time_zones.head()
 
 
 
-<div>
+<div class="table-container">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1885,7 +1885,7 @@ opponent_time_zones.loc[opponent_time_zones['full_team_name'].str.contains('Rams
 
 
 
-<div>
+<div class="table-container">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1941,7 +1941,7 @@ seasons_df.head()
 
 
 
-<div>
+<div class="table-container">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
