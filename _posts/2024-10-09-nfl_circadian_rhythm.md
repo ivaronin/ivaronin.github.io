@@ -161,7 +161,7 @@ lines_table.head()
 
 
 
-<div class="table-container">
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -376,7 +376,7 @@ lines_df.head()
 
 
 
-<div class="table-container"> 
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -525,7 +525,7 @@ _.head()
 
 
 
-<div class="table-container">
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -743,7 +743,7 @@ team_table.head()
 
 
 
-<div class="table-container">
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -771,7 +771,10 @@ team_table.head()
       <th>Location</th>
       <th>Opp</th>
       <th>Tm</th>
-      <th>...</th>
+      <th>Opp</th>
+      <th>1stD</th>
+      <th>TotYd</th>
+      <th>PassY</th>
       <th>RushY</th>
       <th>TO</th>
       <th>1stD</th>
@@ -797,7 +800,10 @@ team_table.head()
       <td>@</td>
       <td>New York Jets</td>
       <td>16.0</td>
-      <td>...</td>
+      <td>22.0</td>
+      <td>19.0</td>
+      <td>314.0</td>
+      <td>217.0</td>
       <td>97.0</td>
       <td>4.0</td>
       <td>13.0</td>
@@ -821,7 +827,10 @@ team_table.head()
       <td>NaN</td>
       <td>Las Vegas Raiders</td>
       <td>38.0</td>
-      <td>...</td>
+      <td>10.0</td>
+      <td>29.0</td>
+      <td>450.0</td>
+      <td>267.0</td>
       <td>183.0</td>
       <td>NaN</td>
       <td>13.0</td>
@@ -845,7 +854,10 @@ team_table.head()
       <td>@</td>
       <td>Washington Commanders</td>
       <td>37.0</td>
-      <td>...</td>
+      <td>3.0</td>
+      <td>20.0</td>
+      <td>386.0</td>
+      <td>218.0</td>
       <td>168.0</td>
       <td>1.0</td>
       <td>15.0</td>
@@ -869,7 +881,10 @@ team_table.head()
       <td>NaN</td>
       <td>Miami Dolphins</td>
       <td>48.0</td>
-      <td>...</td>
+      <td>20.0</td>
+      <td>24.0</td>
+      <td>414.0</td>
+      <td>310.0</td>
       <td>104.0</td>
       <td>NaN</td>
       <td>20.0</td>
@@ -893,7 +908,10 @@ team_table.head()
       <td>NaN</td>
       <td>Jacksonville Jaguars</td>
       <td>20.0</td>
-      <td>...</td>
+      <td>25.0</td>
+      <td>18.0</td>
+      <td>388.0</td>
+      <td>359.0</td>
       <td>29.0</td>
       <td>2.0</td>
       <td>29.0</td>
@@ -907,7 +925,6 @@ team_table.head()
     </tr>
   </tbody>
 </table>
-<p>5 rows × 24 columns</p>
 </div>
 
 
@@ -1015,7 +1032,7 @@ seasons_df.head()
 
 
 
-<div class="table-container">
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1043,7 +1060,12 @@ seasons_df.head()
       <th>Location</th>
       <th>Opp</th>
       <th>Points_Scored</th>
-      <th>...</th>
+      <th>Opp</th>
+      <th>1stD</th>
+      <th>TotYd</th>
+      <th>PassY</th>
+      <th>RushY</th>
+      <th>TO</th>
       <th>1stD</th>
       <th>TotYd</th>
       <th>PassY</th>
@@ -1069,7 +1091,12 @@ seasons_df.head()
       <td>None</td>
       <td>Las Vegas Raiders</td>
       <td>38.0</td>
-      <td>...</td>
+      <td>10.0</td>
+      <td>29.0</td>
+      <td>450.0</td>
+      <td>267.0</td>
+      <td>183.0</td>
+      <td>None</td>
       <td>13.0</td>
       <td>240.0</td>
       <td>185.0</td>
@@ -1093,7 +1120,12 @@ seasons_df.head()
       <td>None</td>
       <td>Miami Dolphins</td>
       <td>48.0</td>
-      <td>...</td>
+      <td>20.0</td>
+      <td>24.0</td>
+      <td>414.0</td>
+      <td>310.0</td>
+      <td>104.0</td>
+      <td>None</td>
       <td>20.0</td>
       <td>393.0</td>
       <td>251.0</td>
@@ -1117,7 +1149,12 @@ seasons_df.head()
       <td>None</td>
       <td>Jacksonville Jaguars</td>
       <td>20.0</td>
-      <td>...</td>
+      <td>25.0</td>
+      <td>18.0</td>
+      <td>388.0</td>
+      <td>359.0</td>
+      <td>29.0</td>
+      <td>2.0</td>
       <td>29.0</td>
       <td>474.0</td>
       <td>278.0</td>
@@ -1141,7 +1178,12 @@ seasons_df.head()
       <td>None</td>
       <td>New York Giants</td>
       <td>14.0</td>
-      <td>...</td>
+      <td>9.0</td>
+      <td>22.0</td>
+      <td>297.0</td>
+      <td>169.0</td>
+      <td>128.0</td>
+      <td>2.0</td>
       <td>20.0</td>
       <td>317.0</td>
       <td>185.0</td>
@@ -1165,7 +1207,12 @@ seasons_df.head()
       <td>None</td>
       <td>Tampa Bay Buccaneers</td>
       <td>24.0</td>
-      <td>...</td>
+      <td>18.0</td>
+      <td>25.0</td>
+      <td>427.0</td>
+      <td>312.0</td>
+      <td>115.0</td>
+      <td>1.0</td>
       <td>17.0</td>
       <td>302.0</td>
       <td>224.0</td>
@@ -1179,7 +1226,6 @@ seasons_df.head()
     </tr>
   </tbody>
 </table>
-<p>5 rows × 26 columns</p>
 </div>
 
 
@@ -1271,7 +1317,7 @@ seasons_df.head()
 
 
 
-<div class="table-container">
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1299,7 +1345,12 @@ seasons_df.head()
       <th>Location</th>
       <th>Opponent</th>
       <th>Points_Scored</th>
-      <th>...</th>
+      <th>Points_Allowed</th>
+      <th>1stD_Off</th>
+      <th>TotYd_Off</th>
+      <th>PassY_Off</th>
+      <th>RushY_Off</th>
+      <th>TO_Off</th>
       <th>1stD_Def</th>
       <th>TotYd_Def</th>
       <th>PassY_Def</th>
@@ -1325,7 +1376,12 @@ seasons_df.head()
       <td>None</td>
       <td>Las Vegas Raiders</td>
       <td>38.0</td>
-      <td>...</td>
+      <td>10.0</td>
+      <td>29.0</td>
+      <td>450.0</td>
+      <td>267.0</td>
+      <td>183.0</td>
+      <td>None</td>
       <td>13.0</td>
       <td>240.0</td>
       <td>185.0</td>
@@ -1349,7 +1405,12 @@ seasons_df.head()
       <td>None</td>
       <td>Miami Dolphins</td>
       <td>48.0</td>
-      <td>...</td>
+      <td>20.0</td>
+      <td>24.0</td>
+      <td>414.0</td>
+      <td>310.0</td>
+      <td>104.0</td>
+      <td>None</td>
       <td>20.0</td>
       <td>393.0</td>
       <td>251.0</td>
@@ -1373,7 +1434,12 @@ seasons_df.head()
       <td>None</td>
       <td>Jacksonville Jaguars</td>
       <td>20.0</td>
-      <td>...</td>
+      <td>25.0</td>
+      <td>18.0</td>
+      <td>388.0</td>
+      <td>359.0</td>
+      <td>29.0</td>
+      <td>2.0</td>
       <td>29.0</td>
       <td>474.0</td>
       <td>278.0</td>
@@ -1397,7 +1463,12 @@ seasons_df.head()
       <td>None</td>
       <td>New York Giants</td>
       <td>14.0</td>
-      <td>...</td>
+      <td>9.0</td>
+      <td>22.0</td>
+      <td>297.0</td>
+      <td>169.0</td>
+      <td>128.0</td>
+      <td>2.0</td>
       <td>20.0</td>
       <td>317.0</td>
       <td>185.0</td>
@@ -1421,7 +1492,12 @@ seasons_df.head()
       <td>None</td>
       <td>Tampa Bay Buccaneers</td>
       <td>24.0</td>
-      <td>...</td>
+      <td>18.0</td>
+      <td>25.0</td>
+      <td>427.0</td>
+      <td>312.0</td>
+      <td>115.0</td>
+      <td>1.0</td>
       <td>17.0</td>
       <td>302.0</td>
       <td>224.0</td>
@@ -1435,7 +1511,6 @@ seasons_df.head()
     </tr>
   </tbody>
 </table>
-<p>5 rows × 26 columns</p>
 </div>
 
 
@@ -1460,7 +1535,7 @@ _.head()
 
 
 
-<div class="table-container">
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1488,7 +1563,12 @@ _.head()
       <th>Location</th>
       <th>Opponent</th>
       <th>Points_Scored</th>
-      <th>...</th>
+      <th>Points_Allowed</th>
+      <th>1stD_Off</th>
+      <th>TotYd_Off</th>
+      <th>PassY_Off</th>
+      <th>RushY_Off</th>
+      <th>TO_Off</th>
       <th>1stD_Def</th>
       <th>TotYd_Def</th>
       <th>PassY_Def</th>
@@ -1514,7 +1594,12 @@ _.head()
       <td>None</td>
       <td>Las Vegas Raiders</td>
       <td>38.0</td>
-      <td>...</td>
+      <td>10.0</td>
+      <td>29.0</td>
+      <td>450.0</td>
+      <td>267.0</td>
+      <td>183.0</td>
+      <td>None</td>
       <td>13.0</td>
       <td>240.0</td>
       <td>185.0</td>
@@ -1538,7 +1623,12 @@ _.head()
       <td>None</td>
       <td>Miami Dolphins</td>
       <td>48.0</td>
-      <td>...</td>
+      <td>20.0</td>
+      <td>24.0</td>
+      <td>414.0</td>
+      <td>310.0</td>
+      <td>104.0</td>
+      <td>None</td>
       <td>20.0</td>
       <td>393.0</td>
       <td>251.0</td>
@@ -1562,7 +1652,12 @@ _.head()
       <td>None</td>
       <td>Jacksonville Jaguars</td>
       <td>20.0</td>
-      <td>...</td>
+      <td>25.0</td>
+      <td>18.0</td>
+      <td>388.0</td>
+      <td>359.0</td>
+      <td>29.0</td>
+      <td>2.0</td>
       <td>29.0</td>
       <td>474.0</td>
       <td>278.0</td>
@@ -1586,7 +1681,12 @@ _.head()
       <td>None</td>
       <td>New York Giants</td>
       <td>14.0</td>
-      <td>...</td>
+      <td>9.0</td>
+      <td>22.0</td>
+      <td>297.0</td>
+      <td>169.0</td>
+      <td>128.0</td>
+      <td>2.0</td>
       <td>20.0</td>
       <td>317.0</td>
       <td>185.0</td>
@@ -1610,7 +1710,12 @@ _.head()
       <td>None</td>
       <td>Tampa Bay Buccaneers</td>
       <td>24.0</td>
-      <td>...</td>
+      <td>18.0</td>
+      <td>25.0</td>
+      <td>427.0</td>
+      <td>312.0</td>
+      <td>115.0</td>
+      <td>1.0</td>
       <td>17.0</td>
       <td>302.0</td>
       <td>224.0</td>
@@ -1624,7 +1729,6 @@ _.head()
     </tr>
   </tbody>
 </table>
-<p>5 rows × 26 columns</p>
 </div>
 
 
@@ -1733,7 +1837,7 @@ time_zones.head()
 
 
 
-<div class="table-container">
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1815,7 +1919,7 @@ opponent_time_zones.head()
 
 
 
-<div class="table-container">
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1885,7 +1989,7 @@ opponent_time_zones.loc[opponent_time_zones['full_team_name'].str.contains('Rams
 
 
 
-<div class="table-container">
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1941,7 +2045,7 @@ seasons_df.head()
 
 
 
-<div class="table-container">
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1969,7 +2073,13 @@ seasons_df.head()
       <th>Opponent</th>
       <th>Points_Scored</th>
       <th>Points_Allowed</th>
-      <th>...</th>
+      <th>1stD_Off</th>
+      <th>TotYd_Off</th>
+      <th>PassY_Off</th>
+      <th>RushY_Off</th>
+      <th>TO_Off</th>
+      <th>1stD_Def</th>
+      <th>TotYd_Def</th>
       <th>PassY_Def</th>
       <th>RushY_Def</th>
       <th>TO_Def</th>
@@ -1995,7 +2105,13 @@ seasons_df.head()
       <td>Las Vegas Raiders</td>
       <td>38.0</td>
       <td>10.0</td>
-      <td>...</td>
+      <td>29.0</td>
+      <td>450.0</td>
+      <td>267.0</td>
+      <td>183.0</td>
+      <td>None</td>
+      <td>13.0</td>
+      <td>240.0</td>
       <td>185.0</td>
       <td>55.0</td>
       <td>3.0</td>
@@ -2019,7 +2135,13 @@ seasons_df.head()
       <td>Las Vegas Raiders</td>
       <td>20.0</td>
       <td>13.0</td>
-      <td>...</td>
+      <td>21.0</td>
+      <td>422.0</td>
+      <td>323.0</td>
+      <td>99.0</td>
+      <td>3.0</td>
+      <td>12.0</td>
+      <td>296.0</td>
       <td>260.0</td>
       <td>36.0</td>
       <td>3.0</td>
@@ -2043,7 +2165,13 @@ seasons_df.head()
       <td>Las Vegas Raiders</td>
       <td>28.0</td>
       <td>31.0</td>
-      <td>...</td>
+      <td>24.0</td>
+      <td>376.0</td>
+      <td>170.0</td>
+      <td>206.0</td>
+      <td>3.0</td>
+      <td>24.0</td>
+      <td>440.0</td>
       <td>368.0</td>
       <td>72.0</td>
       <td>2.0</td>
@@ -2067,7 +2195,13 @@ seasons_df.head()
       <td>Las Vegas Raiders</td>
       <td>36.0</td>
       <td>20.0</td>
-      <td>...</td>
+      <td>25.0</td>
+      <td>406.0</td>
+      <td>156.0</td>
+      <td>250.0</td>
+      <td>1.0</td>
+      <td>22.0</td>
+      <td>375.0</td>
       <td>249.0</td>
       <td>126.0</td>
       <td>3.0</td>
@@ -2091,7 +2225,13 @@ seasons_df.head()
       <td>Las Vegas Raiders</td>
       <td>14.0</td>
       <td>16.0</td>
-      <td>...</td>
+      <td>13.0</td>
+      <td>236.0</td>
+      <td>147.0</td>
+      <td>89.0</td>
+      <td>None</td>
+      <td>20.0</td>
+      <td>328.0</td>
       <td>230.0</td>
       <td>98.0</td>
       <td>2.0</td>
@@ -2105,7 +2245,6 @@ seasons_df.head()
     </tr>
   </tbody>
 </table>
-<p>5 rows × 27 columns</p>
 </div>
 
 
