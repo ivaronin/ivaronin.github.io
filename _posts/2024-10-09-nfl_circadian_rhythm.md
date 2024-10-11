@@ -1837,7 +1837,7 @@ time_zones.head()
 
 
 
-<div style="overflow-x:auto;">
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1919,7 +1919,7 @@ opponent_time_zones.head()
 
 
 
-<div style="overflow-x:auto;">
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1989,7 +1989,7 @@ opponent_time_zones.loc[opponent_time_zones['full_team_name'].str.contains('Rams
 
 
 
-<div style="overflow-x:auto;">
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
