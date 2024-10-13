@@ -4,4 +4,4 @@ My name is Ian Varonin and I have been passionate about of looking for edges sin
 
 In addition to data science and competing against my friends, I am obsessed with Spanish, having spent years studying it and having lived in Colombia for the better part of a year. My dream is to find a role that would allow me to combine my passion for data science and my love for Spanish. 
 
-If you think we could work together or have any feedback or questions, please don't hesitate to reach out via the contact info listed below. 
+If you'd like to be in touch, please feel free to reach out via the contact info listed below. 
