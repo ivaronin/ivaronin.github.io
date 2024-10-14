@@ -1735,7 +1735,7 @@ _.head()
 
 
 
-## Prepare data for analysis
+## Clean and transform data
 Now that we have our data, we will dig in and figure out what cleaning and transformation needs to be done before we can analyze it.
 ### Drop unneeded rows
 There are a few types of rows that can be dropped:
@@ -2759,8 +2759,8 @@ df['score_diff'] = df['Points_Scored'] - df['Points_Allowed']
 df['result_bool'] = df['Result'] == 'W'
 ```
 
-## Analysis! 
-Now that we've pulled, cleaned, and joined our data, and created some helpful columns, it's time to analyze our data.
+## Analysis and Insights! 
+Now that we've gathered, cleaned, and transformed our data, it's time to analyze it to try to derive some meaninful insights.
 
 ### Win rate of west coast teams vs east coast teams in NFL night games
 Let's provide an updated answer to the original question investigated in that deadspin article I read so many years ago: how often do west coast teams beat east coast teams in NFL night games? How has this win rate changed over time? Let's focus regular season games for now as some teams might make special adjustments during the playoffs.
