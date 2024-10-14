@@ -3,7 +3,7 @@ layout: post
 title: How do circadian rhythms affect prime time NFL game outcomes in 2024?
 tags: 
  - sports
- - circadian rhythms
+ - circadian rhythm
  - nfl
  - gambling
 published: true
