@@ -9,4 +9,4 @@ Contact:
 - [Ian's LinkedIn](https://www.linkedin.com/in/ianvaronin/)
 
 Posts:
-- [15 October 2024: How do circadian rhythms affect prime time NFL game outcomes in 2024?](https://ivaronin.github.io/2024/10/09/nfl_circadian_rhythm.html)
+- [09 October 2024: How do circadian rhythms affect prime time NFL game outcomes in 2024?](https://ivaronin.github.io/2024/10/09/nfl_circadian_rhythm.html)
