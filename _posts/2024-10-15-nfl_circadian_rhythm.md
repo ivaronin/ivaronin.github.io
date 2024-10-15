@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How do circadian rhythms affect prime time NFL game outcomes in 2024?
+title: How do circadian rhythms affect prime time NFL games in 2024?
 tags: 
  - sports
  - circadian rhythms
@@ -8,7 +8,7 @@ tags:
  - gambling
 published: true
 ---
-# How do circadian rhythms affect prime time NFL game outcomes in 2024?
+# How do circadian rhythms affect prime time NFL games in 2024?
 About ten years ago I read [this Deadspin article](https://deadspin.com/the-circadian-advantage-how-sleep-patterns-benefit-cer-5934440/) which discussed the effects of circadian rhythms - the cycle during which a person naturally feels more awake or more sleepy during at different times during a 24 hour period - on NFL game scores and betting outcomes. Researchers studied games played on Monday Night Football between a team based on the west coast and a team based on the east coast, i.e. based in time zones three hours apart. Over a 25 year period the west coast team won 63% of the time, winning by an average of two touchdowns, and covered the [point spread](https://www.forbes.com/betting/football/nfl/nfl-point-spread/) - the forecasted difference between the final scores of the favored team and the underdog team, used in betting markets to try to eliminate the advantage of betting on the favored team - 70% of the time. Researchers have posited that the reason west coast teams have had such a huge advantage over east coast teams in prime time games - which always start around 5:20pm Pacific Time, regardless of where the game is played - is because the players based on the west coast feel more awake than the players based on the east coast during these games. During these night games, this three hour time zone difference is significant because players based on the east coast are much closer to their body's natural time for sleep.
 
 Since I love to compete against my friends picking the results of NFL games (both straight up and against the point spread), I was curious if the outcomes described in the article are still true today, 10 years later. Is the edge still so overwhelming for the west coast team in prime time games or have coaches and team doctors found some way to adjust? Has Las Vegas adjusted the point spreads to carve away some or all of the advantage enjoyed by betting on west coast teams in such games? The original analysis focused on Monday Night Football but the NFL now regularly has prime time games on Monday, Thursday, and Sunday so it makes sense to include all three in our analysis.
