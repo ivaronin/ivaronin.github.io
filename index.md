@@ -5,7 +5,7 @@ Hi there and welcome to Ian Varonin's Data Blog! Ian has been obsessed with usin
 If you'd like to be in touch with Ian, please feel free to reach out via the contact info listed below. 
 
 Contact: 
-- ivaronin@gmail.com
+- ian@ianvaronin.com
 - [Ian's LinkedIn](https://www.linkedin.com/in/ianvaronin/)
 
 Posts:
