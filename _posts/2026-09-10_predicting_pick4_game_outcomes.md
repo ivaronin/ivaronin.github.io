@@ -3896,7 +3896,7 @@ Each week, I would choose the four teams with the most complex heuristic points.
 
 I could write a whole post about how I designed this heuristic but for brevity sake I'll just share a screenshot of part of the function I made so you can get an idea. I spent a lot of team fine tuning this heuristic and following its recommendations have won me the pick four league multiple seasons.
 
-![image.png](image.png)
+![complex_heuristic.png](https://github.com/ivaronin/ivaronin.github.io/blob/master/images/complex_heuristic.png)
 
 As before let's start by creating a copy of our dataframe.
 
