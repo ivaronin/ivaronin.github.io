@@ -600,7 +600,7 @@ df.loc[df['ofp_game_id'] == df['ofp_game_id'].value_counts(
 
 
 
-<div>
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2243,7 +2243,7 @@ df_college_scored.loc[df_college_scored.duplicated(subset=['game_id'], keep=Fals
 
 
 
-<div>
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2700,7 +2700,7 @@ There is an API that can pull in NFL game data called `nfl_data_py`. According t
 >
 > years : required, list of years to pull data for (earliest available is 1999)
 
-It is not clear if `year` refers to calendar year or season. Let's investigate by pulling in data for one year and seeing if the dataset contains games played outside the calendar year. This will also give us the opportunity to see which fields will be returns by the NFL API and how the team names are formated.
+It is not clear if `year` refers to calendar year or season. Let's investigate by pulling in data for one year and seeing if the dataset contains games played outside the calendar year. This will also give us the opportunity to see which fields will be returns by the NFL API and how the team names are formatted.
 
 
 ```python
@@ -2714,7 +2714,7 @@ df_nfl_scores_2023.head()
 
 
 
-<div>
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -3366,7 +3366,7 @@ df_all.head()
 
 
 
-<div>
+<div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
