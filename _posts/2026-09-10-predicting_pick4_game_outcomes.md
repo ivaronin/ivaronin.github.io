@@ -1,3 +1,14 @@
+---
+layout: post
+title: Predicting College and NFL Games for Pick 4 (my favorite silly sports picking league)
+tags: 
+ - nfl
+ - college football
+ - sports betting
+ - arbitrage
+ - reverse line movement
+published: true
+---
 # Predicting College and NFL Games for Pick 4 (my favorite silly sports picking league)
 ## Background
 With the NFL season kicking off last night, I wanted to try to improve my process for picking college and pro football games against my friends in our silly sports picking leagues. My favorite friends league is called Pick 4 and involves picking exactly four games [against the spread](https://ats.io/sports-betting/what-is-against-the-spread/) each week. Any college game involving an FBS (the top College division) team or any NFL game is eligible. 
