@@ -451,7 +451,7 @@ df['ofp_game_id'].value_counts().head()
 
 
 
-I believe the field `ofp_game_id` is unique for each game but we should verify this by creating a dataframe where each `away_team`, `home_team`, and `ofp_game_id` combination is assigned to a row. Then we can check and see how many unique `ofp_game_id` values there are.  
+I believe the field `ofp_game_id` is unique for each game but we should verify this by creating a dataframe where each unique `away_team`, `home_team`, and `ofp_game_id` combination is assigned to a row. Then we can check and see how many unique `ofp_game_id` values there are.  
 
 
 ```python
@@ -4681,12 +4681,10 @@ for solver in solvers:
 
 A few different combinations of hyperparameters were able to deliver performance 66.67% (2/3 correct picks), matching our complex heuristic. I'm actually pretty pleased with this because I spent a lot of time fine tuning my complex heuristic. I expect that our machine learning performance will improve as we generate more data to help train out model.
 
-I'm going to pause here for now because I want to deliver this in time for Saturday September 12, 2026, the start of the Pick Four season. 
+I'm going to pause here for now because I want to deliver this in time for Saturday September 12, 2026, the start of the Pick 4 season. 
 
 Using feature generation and hyperparameter optimization (and testing feature scaling) we were able to use a dataset of less than 2,000 records train a model that got 2/3 picks correct. 
 
-Next steps for me will be to retrain the model using our best performing combination of features and hyperparameters and then deploy the model to help me make my picks this season.
+Next steps for me will be to retrain the model with our best performing combination of features and hyperparameters using all available data and then deploy the model to help me make my picks this season.
 
-This is quite a bit more I plan to do with this, fine tuning hyperparameters and generating and testing new features. Additionally, the more data we collect, the better I expect the algorithm to perform. Next year, it will be interesting to see how having another season of data affects the accuracy of our modeling. 
-
-If you made it this far, thank you so much for reading! This project was super specific to my own Pick Four league but hopefully it gave you some ideas you can apply to your own projects. Cheers! 
+If you made it this far, thank you so much for reading! This project was super specific to my own Pick 4 league but hopefully it gave you some ideas you can apply to your own projects. Cheers! 
