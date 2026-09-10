@@ -6,20 +6,20 @@ With (American) football season kicking off ~~soon~~ last night, I wanted to try
 
 Although our picks are due on Saturday morning (and most games are played on Saturday and Sunday), in this league lines lock on Tuesdays. This means that the live (real) line can move quite a bit (due to news or large quantities of money being placed on one of the teams) while the Pick 4 line stays fixed in place at the Tuesday line. When the live line and our fixed Pick 4 line move out of sync it can provide a delightful opportunity for arbitrage. 
 
-Another factor I consider is the percentage of bets that are placed on a team and how the line moves relative to that team. If a team receives a small percentage of bets but the line moves to make it less favorable to bet on that team, this is called [reverse line movement](https://www.actionnetwork.com/education/reverse-line-movement) and it is an indicator that sharp money is betting on that team. 
+Another factor I consider is the percentage of public bets that are placed on a team and how the line moves relative to that team (publicly available data on [Action Network](https://www.actionnetwork.com/nfl/public-betting)). If a team receives a small percentage of public bets but the line moves to make it less favorable to bet on that team, this is called [reverse line movement](https://www.actionnetwork.com/education/reverse-line-movement) and it is an indicator that sharp money is betting on that team. 
 
 At a high level, my current approach to picking games in our Pick 4 league has been:
 - Scrape Office Football Pool for Pick 4 lines as soon as our lines lock on Tuesdays
-- Scrape [Action Network](https://www.actionnetwork.com/nfl/public-betting) for live NFL and College Football game lines and percentage of bets placed on a team
+- Scrape Action Network for live NFL and College Football game lines and percentage of public bets placed on a team
 - Join the Office Football Pool data with the most recent Action Network data
-- Calculate the opportunity of each game based on a complex heuristic I've developed that considers aribtrage opportunity and reverse line movement
+- Calculate the opportunity of each game based on a complex heuristic I've developed that considers aribtrage opportunity and reverse line movement (more on this later)
 - Sort games by best opportunity 
 - Make picks
 
-This system has been remarkably successful and I have at least tied for first in our Pick 4 pool three of the last four years.
+This system has been remarkably successful and I have at least tied for first in our Pick 4 pool three of the last four seasons (out of about 50 entrants each season).
 
 ## Goals for this post
-The purpose of this project is to add more rigor to my Pick 4 game picking process. Although my existing process has borne fruit, it leans too heavily on intuition and I'd like to use machine learning to see if I can beat my existing vibes-based approach. 
+The purpose of this project is to add more rigor to my Pick 4 game picking process. Although my existing process has borne fruit, it relies too heavily on intuition and I'd like to use machine learning to see if I can beat my existing vibes-based approach. 
 
 Before we proceed, I'd like to call out that I had previously factored [circadian rhythms](https://deadspin.com/the-circadian-advantage-how-sleep-patterns-benefit-cer-5934440/) into my picks until [I investigated this phenomenon two years ago](https://ianvaronin.com/2024/10/15/nfl_circadian_rhythm.htlr) and determined that was no longer a viable signal. 
 
@@ -30,7 +30,7 @@ With that preamble out of the way, let's dive into the approach I plan to use he
 
 ## The plan
 1. Get game result data for the past few season
-2. Join my Office Football Pool and Action Network data that I've saved to the game result data
+2. Join my Office Football Pool and Action Network data that I've saved in a database to the game result data
 3. Build and tune a machine learning model to predict whether each favored team would cover the Pick 4 spread given the data available in that moment
 4. Compare the model's predictive abilities against my existing process for choosing games
 
