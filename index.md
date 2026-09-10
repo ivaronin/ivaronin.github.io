@@ -10,3 +10,4 @@ Contact:
 
 Posts:
 - [15 October 2024: How do circadian rhythms affect prime time NFL games in 2024?](https://ivaronin.github.io/2024/10/15/nfl_circadian_rhythm.html)
+- [10 September 2026: Predicting College and NFL Games for Pick 4 (my favorite silly sports picking league)](https://ivaronin.github.io/2026/09/10/predicting_pick4_game_outcomes.html)
